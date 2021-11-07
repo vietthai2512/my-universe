@@ -50,4 +50,6 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Check formatting
-        run: yarn lint-staged
+        run: |
+          yarn lint
+          yarn prettier
