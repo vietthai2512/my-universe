@@ -49,11 +49,5 @@ jobs:
       - name: Install Dependencies
         run: yarn --frozen-lockfile
 
-      - uses: actions/cache@v2
-        with:
-          path: .eslintcache
-          key: lint-${{ env.GITHUB_SHA }}
-          restore-keys: lint-
-
       - name: Check formatting
         run: yarn lint-staged
